@@ -1,0 +1,11 @@
+version: '3.7'
+services:
+
+  mysql-server:
+    container_name: "mysql"
+    image: "mysql:latest"
+    ports:
+      - "${MYSQL_PORT-3306}:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: "root"
+      MYSQL_DATABASE: "data_warehouse"
